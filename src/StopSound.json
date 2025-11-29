@@ -1,0 +1,10 @@
+{
+	"StopSound.Enabled": {
+		"en-us": "Weapon sounds were {{red}}Enabled",
+		"ru-ru": "Звуки стрельбы были {{red}}Включены"
+	},
+	"StopSound.Disabled": {
+		"en-us": "Weapon sounds were {{green}}Disabled",
+		"ru-ru": "Звуки стрельбы были {{green}}Отключены"
+	}
+}
