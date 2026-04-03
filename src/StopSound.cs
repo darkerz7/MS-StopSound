@@ -91,8 +91,8 @@ namespace MS_StopSound
             }
             if (client.GetPlayerController() is { } player && GetLocalizer() is { } lm)
             {
-                var localizer = lm.GetLocalizer(client);
-                player.Print(command.ChatTrigger ? HudPrintChannel.Chat : HudPrintChannel.Console, $" {ChatColor.Blue}[{ChatColor.Green}StopSound{ChatColor.Blue}]{ChatColor.White} {ReplaceColorTags(g_bStopsound[client.Slot] ? localizer.Format("StopSound.Enabled") : localizer.Format("StopSound.Disabled"))}");
+                var localizer = lm.For(client);
+                player.Print(command.ChatTrigger ? HudPrintChannel.Chat : HudPrintChannel.Console, $" {ChatColor.Blue}[{ChatColor.Green}StopSound{ChatColor.Blue}]{ChatColor.White} {ReplaceColorTags(g_bStopsound[client.Slot] ? localizer.Text("StopSound.Enabled") : localizer.Text("StopSound.Disabled"))}");
             }
             return ECommandAction.Stopped;
         }
